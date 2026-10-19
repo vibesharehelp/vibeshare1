@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VibeShare — free profile and website starter demo">
+  <title>VibeShare — Free Web Addresses</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="VibeShare home"><span class="brand-mark">V</span> VibeShare</a>
+    <nav><a href="#features">Features</a><a href="#create">Create page</a><a href="#dashboard">Dashboard</a></nav>
+    <span class="pill">FREE DEMO</span>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">YOUR SPACE ON THE INTERNET</div>
+      <h1>Your ideas deserve<br><span>their own address.</span></h1>
+      <p>Create a personal profile or preview a simple website. Start free on VibeShare's demo platform.</p>
+      <a class="primary" href="#create">Create your page <span>↗</span></a>
+      <div class="url-preview"><span class="green-dot"></span><span id="hero-url">yourname.vibeshare.example</span><span class="demo-tag">DEMO URL</span></div>
+      <p class="notice">Demo only: this preview does not create a live subdomain yet.</p>
+    </section>
+
+    <section id="features" class="feature-grid">
+      <article class="feature"><div class="feature-icon">✦</div><h3>Personal profiles</h3><p>Make a small page with your name, bio and links.</p></article>
+      <article class="feature"><div class="feature-icon">⌘</div><h3>Website preview</h3><p>Paste or upload a small HTML file and preview it locally.</p></article>
+      <article class="feature"><div class="feature-icon">∞</div><h3>Free to start</h3><p>Prototype on a temporary hosting URL before investing in a domain.</p></article>
+    </section>
+
+    <section id="create" class="panel">
+      <div class="section-heading"><div><div class="eyebrow">GET STARTED</div><h2>Create your VibeShare page</h2></div><span class="step">01 / 02</span></div>
+      <form id="profile-form">
+        <label for="username">Choose a username</label>
+        <div class="username-input"><input id="username" name="username" placeholder="e.g. rahul" minlength="3" maxlength="24" pattern="[a-zA-Z0-9-]+" required><span>.vibeshare.example</span></div>
+        <label for="display-name">Display name</label><input id="display-name" name="display-name" placeholder="Your name" maxlength="60" required>
+        <label for="bio">Short bio</label><textarea id="bio" name="bio" placeholder="What should people know about you?" maxlength="180" rows="3"></textarea>
+        <label for="links">Website or social link (optional)</label><input id="links" name="links" type="url" placeholder="https://example.com">
+        <button class="primary" type="submit">Create demo profile <span>↗</span></button>
+        <p class="small">Your demo profile is saved only in this browser. Don't enter private information.</p>
+      </form>
+      <div id="form-message" class="message" role="status" aria-live="polite"></div>
+    </section>
+
+    <section id="dashboard" class="panel">
+      <div class="section-heading"><div><div class="eyebrow">YOUR PAGES</div><h2>Demo dashboard</h2></div><button id="clear-data" class="secondary" type="button">Clear local demo data</button></div>
+      <div id="profile-list" class="profile-list"><div class="empty">No profiles yet. Create one above.</div></div>
+    </section>
+
+    <section class="panel upload-panel">
+      <div class="section-heading"><div><div class="eyebrow">WEBSITE UPLOAD</div><h2>Preview an HTML file</h2></div><span class="pill">LOCAL ONLY</span></div>
+      <p>Choose one small <code>.html</code> file to preview in your browser. It is not uploaded to a server and no public URL is created.</p>
+      <label for="html-file" class="file-picker">Choose HTML file<input type="file" id="html-file" accept=".html,text/html"></label>
+      <div id="file-name" class="small">No file selected</div>
+      <button id="preview-file" class="secondary" type="button">Preview HTML</button>
+      <div id="preview-message" class="message" role="status"></div>
+      <iframe id="html-preview" title="Local HTML preview" sandbox="" hidden></iframe>
+    </section>
+
+    <section class="callout">
+      <h2>Built for the long run.</h2>
+      <p>VibeShare aims to keep pages free while the service remains available. Free services can change; never promise guaranteed lifetime hosting.</p>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">V</span> VibeShare</a><span>Free subdomain service concept · Demo build</span><a href="#create">Get started ↑</a></footer>
+  <script src="./app.js"></script>
+</body>
+</html>
